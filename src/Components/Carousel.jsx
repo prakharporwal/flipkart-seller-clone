@@ -2,6 +2,7 @@ import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { MdPhoneAndroid } from "react-icons/md";
 import SecondaryButton from "./Buttons/SecondaryButton";
+import data from "../data.json";
 import "./Carousel.scss";
 
 const Carousel = () => {
@@ -10,21 +11,22 @@ const Carousel = () => {
       <div className="image-wrapper">
         <img
           className="desktop-banner"
-          src="https://static-assets-web.flixcart.com/fk-sp-static/images/welcome_potal_banner_Desktop_V2_02.svg"
-          alt="banner"
+          src={data.landingPage.registerSection.bannerImageSrc}
+          alt={data.landingPage.registerSection.bannerImageAlt}
         ></img>
         <img
           className="tablet-banner"
-          src="https://static-assets-web.flixcart.com/fk-sp-static/images/Tablet_without_title_02.svg"
-          alt="banner"
+          src={data.landingPage.registerSection.tabletBannerImageSrc}
+          alt={data.landingPage.registerSection.tabletBannerImageAlt}
         ></img>
         <img
           className="mobile-banner"
-          src="https://static-assets-web.flixcart.com/fk-sp-static/images/banner_mobile_v2.4.png"
-          alt="banner"
+          src={data.landingPage.registerSection.mobileBannerImageSrc}
+          alt={data.landingPage.registerSection.mobileBannerImageAlt}
         ></img>
       </div>
       <div className="carousel-form">
+        <h1 className="banner-heading">Sell Online to 50 crores+ customers</h1>
         <h2 style={{ color: "white" }}>Launch Your Business in 10 Minutes</h2>
         <MobileNumberInput />
         <SecondaryButton>

@@ -3,19 +3,18 @@
   height: 28rem;
   background-color: white;
   margin: 2rem 0px;
+
   ul {
     list-style: none;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 
     li {
-      &:active,
-      &:hover {
-        text-decoration: underline blue 2px;
-      }
-
+      text-align: justify;
       h2 {
+        text-align: center;
         text-transform: uppercase;
         font-weight: 600;
         color: rgb(61, 70, 77);

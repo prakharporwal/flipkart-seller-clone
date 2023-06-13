@@ -1,65 +1,84 @@
-.navbar{
+.navbar {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+}
+
+.options-wrapper {
+  //   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.nav-options {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  font-weight: 400;
+
+  li {
+    padding: 1rem 0.5rem;
+  }
+}
+
+.action-buttons {
+  position: absolute;
+  right: 0.5rem;
+  top: 30%;
+  transform: translate(0, -50%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  //   transform: translate(-12rem, -1rem);
+  margin-left: auto;
+
+  .primary-button {
+    display: none;
+  }
+}
+
+.logo-wrapper {
+  width: 10rem;
+  padding: 4px 12px;
+  img {
     width: 100%;
-    height: 6rem;
-    display: flex;
-    position: fixed;
-    top: 0;
-    z-index: 300;
-    background-color: white;
+    display: block;
+  }
 }
 
-.options-wrapper{
-    display: flex;
-    flex-wrap: wrap;
+a,
+a:link,
+a:visited,
+a:active,
+a:hover {
+  text-decoration: none;
+  color: rgb(96, 112, 128);
+}
+
+@media only screen and (min-width: 888px) {
+  .action-buttons {
+    margin-right: auto;
+    right: 2rem;
+    top: 1.8rem;
+  }
+
+  .options-wrapper {
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+  }
 }
 
-.nav-options{
-    display: flex;
-    list-style: none;
-    padding: 0.5rem;
-    margin: 4px;
-    gap: 2rem;
-    font-weight: 400;
-}
-
-.action-buttons{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-left: auto;
-    margin-right: 1rem;
-    transform: translateX(-7rem) translateY(-1rem);
-}
-
-.logo-wrapper{
-    height: 2.5rem;
-    padding: 4px 12px;
-
-    img{
-        max-width: 100%;
-        display: block;
+@media only screen and (min-width: 320px) {
+  .action-buttons {
+    .primary-button {
+      display: block;
     }
-}
-
-a, a:link, a:visited, a:active, a:hover{
-    text-decoration: none;
-    color: rgb(96, 112, 128);
-}
-
-
-
-@media only screen and (min-width: 620px) {
-    .action-buttons{
-        transform: none;
-    }
-}
-
-@media only screen and (min-width: 970px) {
-    .navbar{
-        height: 4rem;
-    }
-
-
+  }
 }

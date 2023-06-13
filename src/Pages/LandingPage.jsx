@@ -2,9 +2,9 @@ import React from "react";
 import Carousel from "../Components/Carousel";
 import data from "../data.json";
 import Testimonial from "../Components/Testimonial";
+import InfoTab from "../Components/InfoTab";
 
 import "./LandingPage.css";
-import InfoTab from "../Components/InfoTab";
 
 const NavBar = React.lazy(() => import("../Components/NavBar"));
 
@@ -13,11 +13,11 @@ const LandingPage = (props) => {
   return (
     <div>
       <NavBar></NavBar>
-      {/* <div className="main-page">
+      <div className="main-page">
         <Carousel />
         <Testimonial testimonials={testimonials} />
         <InfoTab />
-      </div> */}
+      </div>
       {/* <div className="content-section">
         <article>
           <img src="" alt="product-image" />

@@ -1,57 +1,80 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif, "Courier New", Courier, monospace;
+}
+body,
+span,
+button,
+div {
+  font-size: 12px;
 }
 
-body{
-    font-family:'Inter', sans-serif,'Courier New', Courier, monospace;
-    font-size: 14px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.main{
-    height: 100vh;
-    background: lightblue;
-    display: grid;
-    place-items: center;
+/* span {
+  padding: 4px 8px;
+  text-align: left;
+} */
+
+.main {
+  height: 100vh;
+  background: lightblue;
+  display: grid;
+  place-items: center;
 }
 
-.tooltip{
-    /* display: hidden; */
-    height: 12rem;
-    width: 16rem;
-    background: yellow;
-    /* place-items: center; */
-    position: relative;
-    border-radius: 8px;
+.tooltip {
+  /* display: hidden; */
+  height: 12rem;
+  width: 16rem;
+  background: yellow;
+  /* place-items: center; */
+  position: relative;
+  border-radius: 8px;
 }
 
-.tooltip__arrow{
-    position: absolute;
-    height: 1rem;
-    width: 1.8rem;
-    transform: rotate(45deg) translateY(4px);
-    bottom: 0;
-    right: 4rem;
-    background: yellow;
+.tooltip__arrow {
+  position: absolute;
+  height: 1rem;
+  width: 1.8rem;
+  transform: rotate(45deg) translateY(4px);
+  bottom: 0;
+  right: 4rem;
+  background: yellow;
 }
 
-.outer{
-    height: 24rem;
-    width: 24rem;
-    background: #000;
-    position: relative;
+.outer {
+  height: 24rem;
+  width: 24rem;
+  background: #000;
+  position: relative;
 }
 
-.inner{
-    height: 6rem;
-    width: 6rem;
-    background: green;
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
+.inner {
+  height: 6rem;
+  width: 6rem;
+  background: green;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
 }
 /* .tooltip:nth-last-child(1) {
     margin-top: auto;
     background-color: blue;
 } */
+
+@media screen and (min-width: 456px) {
+  body,
+  span,
+  div,
+  input,
+  button {
+    font-size: 16px;
+  }
+}
