@@ -4,7 +4,7 @@ import PrimaryButton from "./Buttons/PrimaryButton";
 import SecondaryButton from "./Buttons/SecondaryButton";
 import "./NavBar.scss";
 
-const NavBar = (props) => {
+const NavBar: React.FunctionComponent<any> = (props) => {
   return (
     <nav className="navbar">
       <div className="options-wrapper">
