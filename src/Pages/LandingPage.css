@@ -1,0 +1,15 @@
+.content-section{
+    position: absolute;
+    top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main-page{
+    width: 100%;
+    position: absolute;
+    top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}

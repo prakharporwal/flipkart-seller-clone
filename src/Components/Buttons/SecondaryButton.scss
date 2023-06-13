@@ -1,0 +1,36 @@
+.secondary-button{
+    background-color: rgb(255, 204, 0);
+    border: 1px solid rgb(255, 204, 0);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    color:rgb(61, 70, 77);
+    width: 6rem;
+    height: 2.5rem;
+    box-shadow: 1px 1px gray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    svg{
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 456px) {
+    .secondary-button{
+        width: 8rem;
+    }
+}
+
+
+@media screen and (min-width: 620px) {
+    .secondary-button{        
+        svg{
+            display: inline;
+        }
+    }
+}

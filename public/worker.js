@@ -14,19 +14,19 @@ const resourcesToPreCache = [
 //   );
 // });
 
-self.addEventListener("fetch", (e) => {
-  e.respondWith(
-    caches.match(e.request).then((cachedResponse) => {
-      return cachedResponse || fetch(e.request);
-    })
-  );
-});
+// self.addEventListener("fetch", (e) => {
+//   e.respondWith(
+//     caches.match(e.request).then((cachedResponse) => {
+//       return cachedResponse || fetch(e.request);
+//     })
+//   );
+// });
 
-self.addEventListener("activate", (e) => {
-  e.waitUntil(
-    caches.open(cacheName).then((cache) => cache.addAll(resourcesToPreCache))
-  );
-});
+// self.addEventListener("activate", (e) => {
+//   e.waitUntil(
+//     caches.open(cacheName).then((cache) => cache.addAll(resourcesToPreCache))
+//   );
+// });
 
 self.addEventListener("push", (e) => {
   debugger;

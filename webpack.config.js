@@ -1,51 +1,74 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   //This property defines where the application starts
-  entry:'./src/index.js',
-    
+  entry: "./src/index.js",
+  mode: "development",
   //This property defines the file path and the file name which will be used for deploying the bundled file
-  output:{
-    path: path.join(__dirname, '/dist'),
-    filename: 'bundle.js'
+  output: {
+    path: path.join(__dirname, "/dist"),
+    filename: "bundle.js",
   },
 
-  resolve :{
-    extensions:['','.js','.jsx'],
-    // extensionAlias: {
-    //     '.js': ['.ts', '.js','.jsx'],
-    //     '.mjs': ['.mts', '.mjs'],
-    //   },
+  resolve: {
+    extensions: ["", ".js", ".jsx", ".ts", ".tsx", ".css"],
   },
-    
+
   //Setup loaders
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/, 
-        exclude: /node_modules$/,
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
-        }
+          loader: "ts-loader",
+        },
+      },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+          },
+          {
+            loader: "sass-loader",
+          },
+        ],
       },
       {
         test: /\.css$/i,
-        exclude: /node_modules$/,
-        use: ["style-loader", "css-loader"],
-
-      }
-    ]
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+          },
+        ],
+      },
+    ],
   },
-    
+
   // Setup plugin to use a HTML file for serving bundled js files
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html'
-    })
+      template: "./public/index.html",
+    }),
   ],
-  devServer:{
+  devServer: {
     port: 9000,
-    open: true
-  }
-}
+    open: true,
+  },
+};

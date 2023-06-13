@@ -1,0 +1,118 @@
+.carousel{
+    width: 100%;
+    position: relative;
+}
+
+.carousel-form{
+    position: absolute;
+    top: 11rem;
+    left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 1rem;
+    width: 18rem;
+    padding: 0.5rem;
+    
+    h2{
+        display: none;
+    }
+}
+
+.image-wrapper{
+    width: 100vw;
+
+    img{
+    width: 100%;
+    vertical-align: middle;
+    }
+}
+
+.mobile-number-input{
+    background-color: white;
+    padding: 4px;
+    border-radius: 4px;
+    width: 75%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 8px;
+    
+    & input {
+        border: none;
+        padding: auto;
+        width: 100%;
+
+        & :active, & :focus{
+            border: none;
+            outline: none;
+        }
+    }
+
+    svg{
+        display: none;
+    }
+}
+
+.mobile-number-input input::placeholder{
+    color: lightgrey;
+}
+
+/* for mobile phone */
+.mobile-banner{
+    display: block;
+}
+
+.tablet-banner, .desktop-banner{
+    display: none;
+}
+
+/* for tablet device */
+@media screen and (min-width: 620px) {
+    .tablet-banner{
+        display: block;
+    }
+
+    .mobile-banner, .desktop-banner{
+        display: none;
+    }
+
+    .carousel-form{
+        top: 4rem;
+        left: 8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        gap: 1rem;
+        width: 18rem;
+    }
+
+    .carousel-form h2{
+        display: inline;
+    }
+
+    .mobile-number-input {
+        width: 80%;
+        padding: 0 0.5rem;
+    }
+
+    .mobile-number-input svg{
+        display: inline;
+    }
+}
+
+
+@media screen and (min-width: 888px) {
+    .desktop-banner{
+        display: block;
+    }
+
+    .tablet-banner, .mobile-banner{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1320) {
+    
+}

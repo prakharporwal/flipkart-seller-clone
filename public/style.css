@@ -3,6 +3,11 @@
     margin: 0;
 }
 
+body{
+    font-family:'Inter', sans-serif,'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+
 .main{
     height: 100vh;
     background: lightblue;

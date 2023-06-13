@@ -1,25 +1,11 @@
 import React from "react";
+import NavBar from "./NavBar";
 
 const Dashboard = (props) => {
   return (
     <div>
       <h1>Dashboard</h1>
-      <nav>
-        <div>
-          <img src="company-logo" alt="logo"></img>
-        </div>
-        <ul>
-          <li>
-            <a>Search</a>
-          </li>
-          <li>
-            <a>Fun</a>
-          </li>
-          <li>
-            <a>Hello</a>
-          </li>
-        </ul>
-      </nav>
+      <NavBar />
       <section>
         <textarea title="item-description"></textarea>
       </section>
