@@ -6,7 +6,8 @@
   "scripts": {
     "start": "react-scripts start",
     "start2": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production && npm run copy",
+    "copy": "cp public/worker.js dist/ && cp public/manifest.json dist/",
     "build2": "react-scripts build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
