@@ -1,10 +1,9 @@
 const cacheName = "cache-v1";
 const resourcesToPreCache = [
-  "/flipkart-seller-clone",
+  "./flipkart-seller-clone",
   "./index.html",
   "./bundle.js",
   "./manifest.json",
-  "./icon.png",
 ];
 
 // todo : need to open this
