@@ -4,6 +4,7 @@ const resourcesToPreCache = [
   "./index.html",
   "./bundle.js",
   "./manifest.json",
+  "./icon.png",
 ];
 
 // todo : need to open this
@@ -21,11 +22,11 @@ self.addEventListener("fetch", (e) => {
   );
 });
 
-// self.addEventListener("activate", (e) => {
-//   e.waitUntil(
-//     caches.open(cacheName).then((cache) => cache.addAll(resourcesToPreCache))
-//   );
-// });
+self.addEventListener("activate", (e) => {
+  e.waitUntil(
+    caches.open(cacheName).then((cache) => cache.addAll(resourcesToPreCache))
+  );
+});
 
 self.addEventListener("push", (e) => {
   console.log("hello");
