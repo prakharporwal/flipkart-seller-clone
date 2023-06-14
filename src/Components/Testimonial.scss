@@ -1,7 +1,9 @@
 .testimonials {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   height: auto;
   padding: 2rem 0;
   background-color: rgb(245, 246, 247);
@@ -12,13 +14,11 @@
 .testimonial {
   display: flex;
   margin: 1rem 0;
-  justify-self: center;
-}
-
-.testimonial img {
-  height: 9rem;
-  width: auto;
-  object-fit: contain;
+  img {
+    height: 9rem;
+    width: auto;
+    object-fit: contain;
+  }
 }
 
 .testimonial-info {
@@ -45,13 +45,13 @@
   font-weight: 600;
 }
 
-.testimonials {
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scroll-snap-align: start;
-  scrollbar-width: none;
-}
+// .testimonials {
+//   overflow-x: scroll;
+//   scroll-snap-type: x mandatory;
+//   scroll-behavior: smooth;
+//   scroll-snap-align: start;
+//   scrollbar-width: none;
+// }
 
 .testimonial-card {
   counter-increment: testimonial-card;
@@ -70,5 +70,6 @@
 @media screen and (min-width: 888px) {
   .testimonials {
     flex-wrap: wrap;
+    flex-direction: row;
   }
 }

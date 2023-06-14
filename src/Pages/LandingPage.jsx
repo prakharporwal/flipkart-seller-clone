@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Carousel from "../Components/Carousel";
 import data from "../data.json";
 import Testimonial from "../Components/Testimonial";
 import InfoTab from "../Components/InfoTab";
 
-import "./LandingPage.css";
-
-const NavBar = React.lazy(() => import("../Components/NavBar"));
+import "./LandingPage.scss";
+import NavBar from "../Components/NavBar";
 
 const LandingPage = (props) => {
   const testimonials = data.landingPage.testimonials;
+
+  useEffect(() => {
+    document.title = "Sell On Flipkart";
+  }, []);
+
   return (
     <div>
       <NavBar></NavBar>

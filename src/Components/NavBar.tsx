@@ -22,7 +22,7 @@ const NavBar: React.FunctionComponent<any> = (props) => {
             <Link to={"/services"}>Services</Link>
           </li>
           <li>
-            <Link to="/resources">Resources</Link>
+            <Link to="/resource">Resources</Link>
           </li>
           <li>
             <Link to="/faq">FAQ</Link>

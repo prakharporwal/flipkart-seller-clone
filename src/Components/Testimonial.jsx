@@ -9,7 +9,7 @@ const Testimonial = (props) => {
   return (
     <div className="testimonials">
       {testimonials.map((item, idx) => (
-        <TestimonialCardItem key={idx} testimonial={item} />
+        <TestimonialItem key={idx} testimonial={item} />
       ))}
       {/* <TestimonialCardItem
         // currentId={currentId}

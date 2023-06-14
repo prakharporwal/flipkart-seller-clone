@@ -8,11 +8,12 @@ module.exports = {
   //This property defines the file path and the file name which will be used for deploying the bundled file
   output: {
     path: path.join(__dirname, "/dist"),
+    // publicPath: "/",
     filename: "bundle.js",
   },
 
   resolve: {
-    extensions: ["", ".js", ".jsx", ".ts", ".tsx", ".css"],
+    extensions: ["", ".js", ".jsx", ".ts", ".tsx", ".css", ".scss"],
   },
 
   //Setup loaders
@@ -21,46 +22,24 @@ module.exports = {
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: "ts-loader",
-        },
+        use: ["ts-loader"],
       },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-        },
+        use: ["babel-loader"],
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-          },
-          {
-            loader: "sass-loader",
-          },
-        ],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.css$/i,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-          },
-        ],
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
-
   // Setup plugin to use a HTML file for serving bundled js files
   plugins: [
     new HtmlWebpackPlugin({

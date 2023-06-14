@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const FAQPage = (props) => {
+const FeeStructurePage: React.FunctionComponent<any> = (props) => {
   return (
     <div style={{ display: "grid", placeItems: "center", height: "100vh" }}>
-      FAQs
+      Fee Structure
       <Link to="/">
         <span>{"<-- Back"}</span>
       </Link>
     </div>
   );
 };
-export default FAQPage;
+
+export default FeeStructurePage;
