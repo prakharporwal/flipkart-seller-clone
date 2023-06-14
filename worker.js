@@ -1,5 +1,10 @@
 const cacheName = "cache-v1";
-const resourcesToPreCache = ["/", "index.html", "bundle.js", "manifest.json"];
+const resourcesToPreCache = [
+  "/flipkart-seller-clone",
+  "./index.html",
+  "./bundle.js",
+  "./manifest.json",
+];
 
 // todo : need to open this
 self.addEventListener("install", (e) => {
