@@ -3,11 +3,11 @@ import { BsArrowRight } from "react-icons/bs";
 import { MdPhoneAndroid } from "react-icons/md";
 import SecondaryButton from "./Buttons/SecondaryButton";
 import data from "../data.json";
-import "./Carousel.scss";
+import "./Banner.scss";
 
-const Carousel = () => {
+const Banner = () => {
   return (
-    <div className="carousel">
+    <div className="banner">
       <div className="image-wrapper">
         <img
           className="desktop-banner"
@@ -25,7 +25,7 @@ const Carousel = () => {
           alt={data.landingPage.registerSection.mobileBannerImageAlt}
         ></img>
       </div>
-      <div className="carousel-form">
+      <div className="banner-form">
         <h1 className="banner-heading">Sell Online to 50 crores+ customers</h1>
         <h2 style={{ color: "white" }}>Launch Your Business in 10 Minutes</h2>
         <MobileNumberInput />
@@ -47,4 +47,4 @@ const MobileNumberInput = (props) => {
   );
 };
 
-export default Carousel;
+export default Banner;

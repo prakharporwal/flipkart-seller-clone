@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Carousel from "../Components/Carousel";
 import data from "../data.json";
 import Testimonial from "../Components/Testimonial";
 import InfoTab from "../Components/InfoTab";
@@ -7,6 +6,7 @@ import InfoTab from "../Components/InfoTab";
 import "./LandingPage.scss";
 import NavBar from "../Components/NavBar";
 import NavTabs from "../Components/NavTabs";
+import Banner from "../Components/Banner";
 
 const LandingPage = (props) => {
   const testimonials = data.landingPage.testimonials;
@@ -19,7 +19,7 @@ const LandingPage = (props) => {
     <div>
       <NavBar></NavBar>
       <div className="main-page">
-        <Carousel />
+        <Banner />
         <Testimonial testimonials={testimonials} />
         {/* <InfoTab className="info-tab" /> */}
         <div className="nav-tabs">
