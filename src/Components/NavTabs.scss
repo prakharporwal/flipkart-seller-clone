@@ -62,11 +62,13 @@
   }
 }
 
-.embed-video {
-  width: 100%;
-  aspect-ratio: 16/9;
-}
-
 .embed-video-wrapper {
   width: 28rem;
+  display: grid;
+  place-items: center;
+
+  iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
 }

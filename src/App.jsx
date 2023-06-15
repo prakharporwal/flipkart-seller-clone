@@ -19,20 +19,15 @@ class App extends Component {
   render() {
     return (
       <StrictMode>
-        <>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<LandingPage />}></Route>
-              <Route path="/services" element={<ServicesPage />}></Route>
-              <Route
-                path="/fee-structure"
-                element={<FeeStructurePage />}
-              ></Route>
-              <Route path="/resource" element={<ResourcesPage />}></Route>
-              <Route path="/faq" element={<FAQPage />}></Route>
-            </Routes>
-          </BrowserRouter>
-        </>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<LandingPage />}></Route>
+            <Route path="/services" element={<ServicesPage />}></Route>
+            <Route path="/fee-structure" element={<FeeStructurePage />}></Route>
+            <Route path="/resource" element={<ResourcesPage />}></Route>
+            <Route path="/faq" element={<FAQPage />}></Route>
+          </Routes>
+        </BrowserRouter>
       </StrictMode>
     );
   }

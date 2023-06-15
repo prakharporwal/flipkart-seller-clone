@@ -117,6 +117,7 @@ const TabItem: React.FunctionComponent<tabProps> = ({ item }) => {
               className="embed-video"
               title="tab section video"
               src={item.video?.link}
+              width={"400px"}
             ></iframe>
           </div>
         )}

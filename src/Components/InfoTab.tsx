@@ -1,10 +1,9 @@
 import "./InfoTab.scss";
 import data from "../data.json";
-import { FiChevronRight } from "react-icons/fi";
 import { useState } from "react";
 
 const InfoTab: React.FunctionComponent<any> = (props) => {
-  const [tabIndex, setTabIndex] = useState(1);
+  const [tabIndex, setTabIndex] = useState(2);
 
   return (
     <div className="info-tab">
