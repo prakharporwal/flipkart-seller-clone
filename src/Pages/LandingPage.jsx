@@ -21,7 +21,7 @@ const LandingPage = (props) => {
       <div className="main-page">
         <Carousel />
         <Testimonial testimonials={testimonials} />
-        <InfoTab className="info-tab" />
+        {/* <InfoTab className="info-tab" /> */}
         <div className="nav-tabs">
           <NavTabs />
         </div>

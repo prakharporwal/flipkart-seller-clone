@@ -3,7 +3,7 @@ import data from "../data.json";
 import "./NavTabs.scss";
 
 const NavTabs: React.FunctionComponent<any> = (props) => {
-  const [tabIndex, setTabIndex] = useState(1);
+  const [tabIndex, setTabIndex] = useState(2);
 
   return (
     <>
@@ -117,7 +117,6 @@ const TabItem: React.FunctionComponent<tabProps> = ({ item }) => {
               className="embed-video"
               title="tab section video"
               src={item.video?.link}
-              width={"400px"}
             ></iframe>
           </div>
         )}

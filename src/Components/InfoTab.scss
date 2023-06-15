@@ -29,7 +29,7 @@
         padding: 1rem;
       }
 
-      h3 {
+      .list-info-heading {
         color: #0066cc;
       }
     }
@@ -64,6 +64,21 @@
       letter-spacing: 0.42px;
       margin: 0 1rem;
     }
+  }
+}
+
+.embed-video-wrapper {
+  width: 4rem;
+
+  iframe {
+    border: none;
+    width: 10%;
+    aspect-ratio: 16/9;
+  }
+
+  h3 {
+    text-align: center;
+    // padding: 0.5rem;
   }
 }
 

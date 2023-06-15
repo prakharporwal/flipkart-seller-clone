@@ -1,15 +1,12 @@
 import "./InfoTab.scss";
 import data from "../data.json";
-import { useState } from "react";
 
 const InfoTab: React.FunctionComponent<any> = (props) => {
-  const [tabIndex, setTabIndex] = useState(2);
-
   return (
     <div className="info-tab">
       <ul>
         {data.landingPage.howTo.map((item, idx) => (
-          <TabItem key={idx} item={item} active={idx === tabIndex} />
+          <TabItem key={idx} item={item} />
         ))}
       </ul>
     </div>
@@ -41,7 +38,6 @@ type howToItem = {
 
 interface tabProps {
   item: howToItem;
-  active: boolean;
 }
 
 // {
@@ -97,12 +93,19 @@ interface tabProps {
 //     }
 //   }
 
-const TabItem: React.FunctionComponent<tabProps> = ({ item, active }) => {
+const TabItem: React.FunctionComponent<tabProps> = ({ item }) => {
   return (
     <li>
       <h2>{item.header}</h2>
       {item.video?.link && (
-        <iframe title="tab section video" src={item.video?.link}></iframe>
+        <div className="embed-video-wrapper">
+          <h3 className="">{item.video?.caption}</h3>
+          <iframe
+            className="embed-video"
+            title="tab section video"
+            src={item.video?.link}
+          ></iframe>
+        </div>
       )}
       <h2>{item.requisites?.caption}</h2>
       <div>
@@ -112,7 +115,7 @@ const TabItem: React.FunctionComponent<tabProps> = ({ item, active }) => {
               <img src={i.icon.url} alt={i.icon.alt} />
             </div>
             <div className="list-info">
-              <h3>{i.caption + " >"}</h3>
+              <h3 className="list-info-heading">{i.caption + " >"}</h3>
               <div>{i.text}</div>
             </div>
           </section>
