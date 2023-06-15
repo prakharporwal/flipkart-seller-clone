@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  //   gap: 1rem;
 }
 
 .tab-heading {
@@ -18,28 +17,28 @@
   height: 50vh;
   display: flex;
   justify-content: space-evenly;
+  margin: 0 2rem;
 }
 
-.tab-info {
+.tab-info h3 {
   text-align: center;
 }
 
 .tab-info-list {
-  height: 100%;
+  // margin: 2rem;
+  width: 50vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 .item-requisite-list {
+  height: auto;
+  padding: 1rem;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 1rem;
-  justify-content: space-around;
-  height: 50vh;
+  justify-content: center;
 
   .img-wrapper {
-    width: rem;
+    width: 10rem;
     // border: 2px solid red;
   }
 
@@ -49,10 +48,10 @@
   }
 
   .list-info {
-    // padding: 4px;
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 40%;
+    justify-content: start;
 
     font-family: Inter, sans-serif;
     font-weight: 400;
@@ -60,7 +59,6 @@
     font-size: 15px;
     line-height: 27px;
     letter-spacing: 0.42px;
-    margin: 0 1rem;
   }
 }
 

@@ -112,6 +112,7 @@ const TabItem: React.FunctionComponent<tabProps> = ({ item }) => {
       <div>
         {item.video?.link && (
           <div className="embed-video-wrapper">
+            <h3>{item.video?.caption}</h3>
             <iframe
               className="embed-video"
               title="tab section video"
@@ -121,7 +122,7 @@ const TabItem: React.FunctionComponent<tabProps> = ({ item }) => {
         )}
       </div>
       <div className="tab-info">
-        <h4>{item.requisites?.caption}</h4>
+        <h3>{item.requisites?.caption}</h3>
         <div className="tab-info-list">
           {item.requisites?.list.map((i: any) => (
             <section className="item-requisite-list">
