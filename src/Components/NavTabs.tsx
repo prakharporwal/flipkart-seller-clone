@@ -1,19 +1,28 @@
-import "./InfoTab.scss";
-import data from "../data.json";
-import { FiChevronRight } from "react-icons/fi";
 import { useState } from "react";
+import data from "../data.json";
+import "./NavTabs.scss";
 
-const InfoTab: React.FunctionComponent<any> = (props) => {
+const NavTabs: React.FunctionComponent<any> = (props) => {
   const [tabIndex, setTabIndex] = useState(1);
 
   return (
-    <div className="info-tab">
-      <ul>
+    <>
+      <div className="tab-heading-wrapper">
         {data.landingPage.howTo.map((item, idx) => (
-          <TabItem key={idx} item={item} active={idx === tabIndex} />
+          <span
+            className="tab-heading"
+            onClick={() => {
+              setTabIndex(idx);
+            }}
+          >
+            {item.header}
+          </span>
         ))}
-      </ul>
-    </div>
+      </div>
+      <div className="tab-item">
+        <TabItem item={data.landingPage.howTo[tabIndex]} />
+      </div>
+    </>
   );
 };
 
@@ -42,7 +51,6 @@ type howToItem = {
 
 interface tabProps {
   item: howToItem;
-  active: boolean;
 }
 
 // {
@@ -98,31 +106,41 @@ interface tabProps {
 //     }
 //   }
 
-const TabItem: React.FunctionComponent<tabProps> = ({ item, active }) => {
+const TabItem: React.FunctionComponent<tabProps> = ({ item }) => {
   return (
-    <li>
-      <h2>{item.header}</h2>
-      {item.video?.link && (
-        <iframe title="tab section video" src={item.video?.link}></iframe>
-      )}
-      <h2>{item.requisites?.caption}</h2>
+    <>
       <div>
-        {item.requisites?.list.map((i: any) => (
-          <section className="item-requisite-list">
-            <div className="img-wrapper">
-              <img src={i.icon.url} alt={i.icon.alt} />
-            </div>
-            <div className="list-info">
-              <h3>{i.caption + " >"}</h3>
-              <div>{i.text}</div>
-            </div>
-          </section>
-        ))}
+        {item.video?.link && (
+          <div className="embed-video-wrapper">
+            <iframe
+              className="embed-video"
+              title="tab section video"
+              src={item.video?.link}
+            ></iframe>
+          </div>
+        )}
       </div>
-    </li>
+      <div className="tab-info">
+        <h4>{item.requisites?.caption}</h4>
+        <div className="tab-info-list">
+          {item.requisites?.list.map((i: any) => (
+            <section className="item-requisite-list">
+              <div className="img-wrapper">
+                <img src={i.icon.url} alt={i.icon.alt} />
+              </div>
+              <div className="list-info">
+                <h3>
+                  {i.caption}
+                  {" >"}
+                </h3>
+                <div>{i.text}</div>
+              </div>
+            </section>
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 
-const TabInfoListItem = () => {};
-
-export default InfoTab;
+export default NavTabs;

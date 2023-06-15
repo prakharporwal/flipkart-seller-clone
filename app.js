@@ -9,7 +9,7 @@ app.listen(8000, () => {
 
 app.use(express.static("dist"));
 
-app.get("/", function (req, resp) {
+app.use(function (req, resp) {
   resp.sendFile(path.join(__dirname + "/dist/index.html"));
 });
 

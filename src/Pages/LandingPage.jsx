@@ -6,6 +6,7 @@ import InfoTab from "../Components/InfoTab";
 
 import "./LandingPage.scss";
 import NavBar from "../Components/NavBar";
+import NavTabs from "../Components/NavTabs";
 
 const LandingPage = (props) => {
   const testimonials = data.landingPage.testimonials;
@@ -20,7 +21,10 @@ const LandingPage = (props) => {
       <div className="main-page">
         <Carousel />
         <Testimonial testimonials={testimonials} />
-        <InfoTab />
+        <InfoTab className="info-tab" />
+        <div className="nav-tabs">
+          <NavTabs />
+        </div>
       </div>
       {/* <div className="content-section">
         <article>
