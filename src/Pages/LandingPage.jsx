@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import data from "../data.json";
 import Testimonial from "../Components/Testimonial";
 import InfoTab from "../Components/InfoTab";
+import NavTabs from "../Components/NavTabs";
+import Banner from "../Components/Banner";
 
 import "./LandingPage.scss";
 import NavBar from "../Components/NavBar";
-import NavTabs from "../Components/NavTabs";
-import Banner from "../Components/Banner";
 
 const LandingPage = (props) => {
   const testimonials = data.landingPage.testimonials;
@@ -17,11 +17,11 @@ const LandingPage = (props) => {
 
   return (
     <div>
-      <NavBar></NavBar>
+      <NavBar />
       <div className="main-page">
         <Banner />
         <Testimonial testimonials={testimonials} />
-        {/* <InfoTab className="info-tab" /> */}
+        <InfoTab className="info-tab" />
         <div className="nav-tabs">
           <NavTabs />
         </div>

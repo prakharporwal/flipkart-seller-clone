@@ -1,21 +1,22 @@
 .testimonials {
+  display: none;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: auto;
+}
+
+.testimonials-carousel {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-  padding: 2rem 0;
-  background-color: rgb(245, 246, 247);
-  border: 1px solid rgb(193, 199, 208);
-  overflow-x: auto;
-  border: 2px solid red;
-  width: 100vw;
+  width: 300vw;
+  transition: transform 0.5s ease, left 0.5s ease, right 0.5s ease;
 }
 
 .testimonial {
   display: flex;
   margin: 1rem 0;
+
   img {
     height: 9rem;
     width: auto;
@@ -55,23 +56,60 @@
 //   scrollbar-width: none;
 // }
 
-.testimonial-card {
-  counter-increment: testimonial-card;
-
-  &before {
-    display: block;
-    text-align: center;
-    content: counter(testimonial-card);
-  }
+.testimonial-carousel-card {
+  display: inline;
+  min-width: 100vw;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(193, 199, 208, 0.2);
+  overflow: hidden;
 
   img {
     max-width: 100%;
+  }
+
+  cursor: pointer;
+
+  // transition: transform 0.5s ease, left 0.5s ease, right 0.5s ease;
+}
+
+.carousel-button-wrapper {
+  width: 1.8rem;
+  height: 1.5rem;
+  padding: 0 0.1rem;
+
+  button {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: white;
+    border: none;
+
+    &:hover &:focus &:active {
+      border-color: aliceblue;
+    }
   }
 }
 
 @media screen and (min-width: 888px) {
   .testimonials {
-    flex-wrap: wrap;
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 2rem 0;
+    background-color: rgb(245, 246, 247);
+    border: 1px solid rgb(193, 199, 208);
+    overflow-x: auto;
+    width: 100vw;
+  }
+
+  .testimonials-carousel {
+    display: none;
   }
 }

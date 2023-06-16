@@ -19,10 +19,10 @@
   }
 }
 
-.banner-heading {
+.banner-form .banner-heading {
   display: none;
   color: #ffe500;
-  font-size: 2rem;
+  font-size: 2px;
   white-space: nowrap;
 }
 
@@ -100,7 +100,9 @@
       display: inline;
     }
     .banner-heading {
-      display: inline;
+      font-size: 2rem;
+      width: 80%;
+      white-space: nowrap;
     }
   }
 
@@ -110,6 +112,14 @@
 
   .mobile-number-input svg {
     display: inline;
+  }
+}
+
+@media screen and (min-width: 620px) {
+  .banner-form .banner-heading {
+    display: block;
+    font-size: 2rem;
+    width: 80%;
   }
 }
 
