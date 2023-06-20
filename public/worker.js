@@ -28,13 +28,13 @@ self.addEventListener("fetch", (e) => {
 //   );
 // });
 
-self.addEventListener("push", (e) => {
-  console.log("hello");
+// self.addEventListener("push", (e) => {
+//   console.log("hello");
 
-  e.waitUntil(
-    self.registration.showNotification("title", {
-      body: "Hey I am body",
-      tag: "tagging",
-    })
-  );
-});
+//   e.waitUntil(
+//     self.registration.showNotification("title", {
+//       body: "Hey I am body",
+//       tag: "tagging",
+//     })
+//   );
+// });

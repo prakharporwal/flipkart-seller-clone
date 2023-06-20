@@ -16,3 +16,32 @@ app.use(function (req, resp) {
 // app.get("/static/*", function (req, resp) {
 //   resp.sendFile(__dirname + "/public/");
 // });
+
+// app.set("view engine", "ejs");
+
+// const user = {
+//   firstName: "Prakhar",
+//   lastName: "Porwal",
+//   Role: "UI Engineer",
+//   admin: true,
+// };
+
+// const tasks = [
+//   {
+//     title: "Understanding Templating Engine internals",
+//     description: "Understand how it works, flow, ",
+//   },
+//   {
+//     title: "know about the architecture of backend for Mass Mart",
+//     description:
+//       "what is the HLD, what is the LLD, what is the Infra structure, how is the business side working for it ?",
+//   },
+// ];
+
+app.get("/hello", function (req, resp) {
+  resp.render("pages/index", {
+    user: user,
+    title: "Introduction",
+    tasks: tasks,
+  });
+});

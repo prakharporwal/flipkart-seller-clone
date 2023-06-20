@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <%-include('../partials/header')%>
+    <h1>Hi, I am <%= user.firstName %></h1>
+    <h1>I am a <%= user.Role %></h1>
+
+    <% if (user.admin) { %>
+    <p>Let me tell you a secret: <b>I am an admin</b></p>
+    <% } %>
+
+    <ul class="tasks-list">
+      <h2>Tasks</h2>
+      <% tasks.forEach((task) => { %>
+      <li class="task-item">
+        <h3><%= task.title %></h3>
+        <p><%= task.description %></p>
+        <% }) %>
+      </li>
+    </ul>
+
+    <%- include('../partials/footer')%>
+  </body>
+</html>
